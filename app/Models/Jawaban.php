@@ -11,9 +11,15 @@ class Jawaban
         return $items;
     }
 
-    public static function join($table, $from, $to)
+    public static function selection($table, $table_)
     {
-        $items = DB::table('jawabans')->join($table, $from, '=', $to)->get();
+        $items = DB::table('jawabans')->select($table, $table_)->get();
+        return $items;
+    }
+
+    public static function right_join($table, $from, $to)
+    {
+        $items = DB::table('jawabans')->rightJoin($table, $from, '=', $to)->get();
         return $items;
     }
 

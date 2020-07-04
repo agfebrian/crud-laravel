@@ -9,8 +9,8 @@ class JawabanController extends Controller
 {
     public function index($id)
     {
-        $items = Jawaban::join('pertanyaans', 'jawabans.pertanyaan_id', 'pertanyaans.id')
-                ->where('pertanyaan_id', $id);
+        $items = Jawaban::right_join('pertanyaans', 'jawabans.pertanyaan_id', 'pertanyaans.id')
+                ->where('id', $id);
         return view('jawabans.index', ['items' => $items]);
     }
     public function create($id)

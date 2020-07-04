@@ -12,6 +12,7 @@
 */
 
 // pertanyaan
+Route::get('/', 'PertanyaanController@index')->name('pertanyaan.index');
 Route::get('/pertanyaan', 'PertanyaanController@index')->name('pertanyaan.index');
 Route::get('/pertanyaan/create', 'PertanyaanController@create')->name('pertanyaan.create');
 Route::post('/pertanyaan', 'PertanyaanController@store')->name('pertanyaan.store');
