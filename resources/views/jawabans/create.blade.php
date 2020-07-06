@@ -9,7 +9,7 @@
             </div>
             <form action="{{ route('jawaban.store') }}" method="POST">
                 @csrf
-                <input type="hidden" name="pertanyaan_id" value="{{ $item->id }}">
+                <input type="hidden" name="pertanyaan_id" value="{{ $item->id_pertanyaan }}">
                 <div class="pt-4">
                   <div class="form-group">
                     <label for="pertanyaan">Isi Komentar</label>

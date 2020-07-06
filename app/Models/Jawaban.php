@@ -11,6 +11,12 @@ class Jawaban
         return $items;
     }
 
+    public static function find_id($id)
+    {
+        $item = DB::table('jawabans')->where('id_jawaban', $id)->get();
+        return $item;
+    }
+
     public static function selection($table, $table_)
     {
         $items = DB::table('jawabans')->select($table, $table_)->get();
